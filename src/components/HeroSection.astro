@@ -1,0 +1,44 @@
+---
+import SocialNav from "./SocialNav.astro";
+import SectionNav from "./SectionNav.astro";
+
+interface Props {
+  title: string;
+  subTitle: string;
+  bgSection: string;
+  bgBlur: string;
+}
+
+const { title, subTitle, bgSection, bgBlur } = Astro.props;
+---
+
+<section class="w-screen h-screen flex justify-center relative p-10">
+  <img
+    class="absolute top-0 left-0 object-cover overflow-hidden w-full h-full -z-10"
+    src={bgSection}
+    alt="imagen de fondo"
+  />
+  <div
+    class="container flex items-center justify-between max-w-4xl h-full relative rounded-xl p-4 text-[#fca311]"
+  >
+    <div
+      class="left flex flex-col justify-between items-center h-full w-1/2 relative"
+    >
+      <div
+        class="data-container h-1/2 w-full flex flex-col justify-center items-center text-center gap-3"
+      >
+        <h1 class="text-5xl drop-shadow">{title}</h1>
+        <h3 class="drop-shadow">{subTitle}</h3>
+      </div>
+      <SocialNav />
+    </div>
+    <div class="righ w-1/2 h-full relative">
+      <SectionNav />
+    </div>
+    <img
+      class="absolute top-0 left-0 -z-10 h-full w-full object-cover overflow-hidden rounded-xl"
+      src={bgBlur}
+      alt="imagen de fondo difuminada"
+    />
+  </div>
+</section>
