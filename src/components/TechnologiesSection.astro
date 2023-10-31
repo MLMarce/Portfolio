@@ -1,0 +1,61 @@
+---
+import AstroSVG from "./AstroSVG.astro";
+import CSS3SVG from "./CSS3SVG.astro";
+import Footer from "./Footer.astro";
+import HTML5SVG from "./HTML5SVG.astro";
+import JavaScriptSVG from "./JavaScriptSVG.astro";
+import ReactSVG from "./ReactSVG.astro";
+import TailwindSVG from "./TailwindSVG.astro";
+interface Props {
+  title: string;
+  bgSection: string;
+  bgBlur: string;
+}
+
+const { title, bgSection, bgBlur } = Astro.props;
+---
+
+<section
+  id="technologies"
+  class="w-screen h-screen flex justify-center relative p-10"
+>
+  <img
+    class="absolute top-0 left-0 object-cover overflow-hidden w-full h-full -z-10"
+    src={bgSection}
+    alt="imagen de fondo"
+  />
+  <div
+    class="container flex flex-col items-center justify-between max-w-4xl h-full relative rounded-xl p-4 text-[#fca311]"
+  >
+    <div class="header flex justify-between items-center content-center w-full">
+      <a class="opacity-50 hover:opacity-95" href="#about">⬅️ Sobre Mí</a>
+      <h1 class="text-3xl font-medium">{title}</h1>
+      <a class="opacity-50 hover:opacity-95" href="#projects">Proyectos ➡️</a>
+    </div>
+    <div
+      class="left flex flex-col justify-center items-start h-full w-full relative text-[#e85d04] p-4 text-2xl [&>p]:p-2"
+    >
+      <div class="flex flex-col h-full w-full flex-grow items-center pt-4">
+        <h2 class="text-[#fca311]">
+          Estas son las tecnologías que utilizo frecuentemente
+        </h2>
+        <div
+          class="p-5 pt-0 flex flex-grow basis-0 gap-x-20 justify-center items-center flex-wrap-reverse [&>p]:p-5 [&>p]:flex [&>p]:flex-col-reverse [&>p]:justify-center [&>p]:items-center"
+        >
+          <p>HTML5 <HTML5SVG /></p>
+          <p>CSS3 <CSS3SVG /></p>
+          <p>Tailwind CSS <TailwindSVG /></p>
+          <p>JavaScript <JavaScriptSVG /></p>
+          <p>React <ReactSVG /></p>
+          <p>Astro <AstroSVG /></p>
+        </div>
+      </div>
+    </div>
+    <img
+      class="absolute top-0 left-0 -z-10 h-full w-full object-cover overflow-hidden rounded-xl"
+      src={bgBlur}
+      alt="imagen de fondo difuminada"
+    />
+  </div>
+  <Footer />
+</section>

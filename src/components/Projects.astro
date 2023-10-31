@@ -1,0 +1,89 @@
+---
+import Footer from "./Footer.astro";
+interface Props {
+  title: string;
+  bgSection: string;
+  bgBlur: string;
+}
+
+const { title, bgSection, bgBlur } = Astro.props;
+---
+
+/3<section
+  id="projects"
+  class="w-screen h-screen flex justify-center relative p-10"
+>
+  <img
+    class="absolute top-0 left-0 object-cover overflow-hidden w-full h-full -z-10"
+    src={bgSection}
+    alt="imagen de fondo"
+  />
+  <div
+    class="container flex flex-col items-center justify-between max-w-4xl h-full relative rounded-xl p-4 text-[#fca311]"
+  >
+    <div class="header flex justify-between items-center content-center w-full">
+      <a class="opacity-50 hover:opacity-95" href="#technologies"
+        >⬅️ Tecnologías</a
+      >
+      <h1 class="text-3xl font-medium">{title}</h1>
+      <a class="opacity-50 hover:opacity-95" href="#hero">Inicio ➡️</a>
+    </div>
+    <div
+      class="left flex flex-col justify-center items-start h-full w-full relative text-[#e85d04] p-4 text-2xl [&>p]:p-2"
+    >
+      <div
+        class="flex flex-col h-full w-full flex-grow items-center pt-4 relative"
+      >
+        <h2 class="text-[#fca311]">Estos son algunos de mis proyectos</h2>
+        <div
+          class="p-5 relative flex flex-col basis-0 justify-center items-center gap-4 flex-wrap-reverse sm:flex-row [&>div]:rounded-lg [&>div]:min-w-28 [&>div]:max-w-sm"
+        >
+          <div class="border overflow-hidden [&>a>img]:hover:scale-110">
+            <a
+              href="https://responsivelandingpage-by-enkidev.netlify.app/"
+              target="_blank"
+              ><img
+                class="object-cover object-center transition-all duration-300"
+                src="../../public/Media/mokups/dashboard.png"
+                alt=""
+              /></a
+            >
+          </div>
+          <div class="border overflow-hidden [&>a>img]:hover:scale-110">
+            <a href="https://mokepons.netlify.app/" target="_blank"
+              ><img
+                class="object-cover object-center transition-all duration-300"
+                src="../../public/Media/mokups/mokepon.png"
+                alt=""
+              /></a
+            >
+          </div>
+          <div class="border overflow-hidden [&>a>img]:hover:scale-110">
+            <a href="https://tesla-landing-clonada.netlify.app/" target="_blank"
+              ><img
+                class="object-cover object-center transition-all duration-300"
+                src="../../public/Media/mokups/tesla.png"
+                alt=""
+              /></a
+            >
+          </div>
+          <div class="border overflow-hidden [&>a>img]:hover:scale-110">
+            <a href="https://holip.netlify.app/" target="_blank"
+              ><img
+                class="object-cover object-center transition-all duration-300"
+                src="../../public/Media/mokups/felizcumple.png"
+                alt=""
+              /></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <img
+      class="absolute top-0 left-0 -z-10 h-full w-full object-cover overflow-hidden rounded-xl"
+      src={bgBlur}
+      alt="imagen de fondo difuminada"
+    />
+  </div>
+  <Footer />
+</section>

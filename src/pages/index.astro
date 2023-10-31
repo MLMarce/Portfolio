@@ -1,11 +1,15 @@
 ---
 import AboutSection from "../components/AboutSection.astro";
 import HeroSection from "../components/HeroSection.astro";
+import Projects from "../components/Projects.astro";
+import TechnologiesSection from "../components/TechnologiesSection.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Marcelo 'enki' Lencina">
-  <main class="snap-y snap-mandatory">
+  <main
+    class="snap-y snap-mandatory relative h-screen w-screen overflow-x-hidden"
+  >
     <div class="snap-center">
       <HeroSection
         title="Marcelo Lencina"
@@ -23,6 +27,20 @@ import Layout from "../layouts/Layout.astro";
         edad="26"
         apodo="Enki"
         hobbies="'Diseño gráfico', 'Fútbol 5', 'Canto'"
+      />
+    </div>
+    <div class="snap-center">
+      <TechnologiesSection
+        title="Tecnologías"
+        bgSection="../../public/Media/fondo.png"
+        bgBlur="../../public/Media/fondodifuminado.png"
+      />
+    </div>
+    <div class="snap-center">
+      <Projects
+        title="Proyectos"
+        bgSection="../../public/Media/fondo.png"
+        bgBlur="../../public/Media/fondodifuminado.png"
       />
     </div>
   </main>
