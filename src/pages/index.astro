@@ -5,21 +5,25 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Marcelo 'enki' Lencina">
-  <main>
-    <HeroSection
-      title="Marcelo Lencina"
-      subTitle="Desarrollador Web Front End"
-      bgSection="../../public/Media/fondo.png"
-      bgBlur="../../public/Media/fondodifuminado.png"
-    />
-    <AboutSection
-      title="Sobre Mí"
-      bgSection="../../public/Media/fondo.png"
-      bgBlur="../../public/Media/fondodifuminado.png"
-      nombreCompleto="Marcelo Daniel Lencina"
-      edad="26"
-      apodo="Enki"
-      hobbies="'Diseño gráfico', 'Fútbol 5', 'Canto'"
-    />
+  <main class="snap-y snap-mandatory">
+    <div class="snap-center">
+      <HeroSection
+        title="Marcelo Lencina"
+        subTitle="Desarrollador Web Front End"
+        bgSection="../../public/Media/fondo.png"
+        bgBlur="../../public/Media/fondodifuminado.png"
+      />
+    </div>
+    <div class="snap-center">
+      <AboutSection
+        title="Sobre Mí"
+        bgSection="../../public/Media/fondo.png"
+        bgBlur="../../public/Media/fondodifuminado.png"
+        nombreCompleto="Marcelo Daniel Lencina"
+        edad="26"
+        apodo="Enki"
+        hobbies="'Diseño gráfico', 'Fútbol 5', 'Canto'"
+      />
+    </div>
   </main>
 </Layout>
