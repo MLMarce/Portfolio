@@ -17,7 +17,7 @@ const { title, bgSection, bgBlur } = Astro.props;
 
 <section
   id="technologies"
-  class="w-screen h-screen flex justify-center relative p-10"
+  class="w-screen h-screen flex justify-center relative p-3 md:p-10"
 >
   <img
     class="absolute top-0 left-0 object-cover overflow-hidden w-full h-full -z-10"
@@ -25,26 +25,32 @@ const { title, bgSection, bgBlur } = Astro.props;
     alt="imagen de fondo"
   />
   <div
-    class="container flex flex-col items-center justify-between max-w-4xl h-full relative rounded-xl p-4 text-[#fca311]"
+    class="container flex flex-col items-center justify-between max-w-4xl h-full relative rounded-xl p-1 md:p-4 text-[#fca311]"
   >
     <div class="header flex justify-between items-center content-center w-full">
-      <a class="opacity-50 hover:opacity-95" href="#about">⬅️ Sobre Mí</a>
+      <a class="opacity-50 hover:opacity-95 pl-5" href="#about"
+        >⬅️ <span class="hidden md:inline-block">Sobre Mí</span></a
+      >
       <h1 class="text-3xl font-medium">{title}</h1>
-      <a class="opacity-50 hover:opacity-95" href="#projects">Proyectos ➡️</a>
+      <a class="opacity-50 hover:opacity-95 pr-5" href="#projects"
+        ><span class="hidden md:inline-block">Proyectos</span> ➡️</a
+      >
     </div>
     <div
-      class="left flex flex-col justify-center items-start h-full w-full relative text-[#e85d04] p-4 text-2xl [&>p]:p-2"
+      class="left flex flex-col justify-center items-start h-full w-full relative text-[#ededed] p-1 md:p-4 text-2xl [&>p]:p-2"
     >
-      <div class="flex flex-col h-full w-full flex-grow items-center pt-4">
-        <h2 class="text-[#fca311]">
+      <div
+        class="flex flex-col h-full w-full md:flex-grow items-center p-0 pt-4 relative"
+      >
+        <h4 class="text-[#fca311] pl-6">
           Estas son las tecnologías que utilizo frecuentemente
-        </h2>
+        </h4>
         <div
-          class="p-5 pt-0 flex flex-grow basis-0 gap-x-20 justify-center items-center flex-wrap-reverse [&>p]:p-5 [&>p]:flex [&>p]:flex-col-reverse [&>p]:justify-center [&>p]:items-center"
+          class="w-full h-full grid grid-cols-2 grid-rows-3 p-0 md:p-5 md:pt-0 md:flex md:flex-grow md:basis-0 md:gap-x-20 md:justify-center md:items-center md:flex-wrap-reverse [&>p]:p-5 [&>p]:flex [&>p]:flex-col-reverse [&>p]:justify-center [&>p]:items-center"
         >
           <p>HTML5 <HTML5SVG /></p>
           <p>CSS3 <CSS3SVG /></p>
-          <p>Tailwind CSS <TailwindSVG /></p>
+          <p>Tailwind<TailwindSVG /></p>
           <p>JavaScript <JavaScriptSVG /></p>
           <p>React <ReactSVG /></p>
           <p>Astro <AstroSVG /></p>
