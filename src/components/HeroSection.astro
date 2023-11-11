@@ -5,22 +5,16 @@ import SectionNav from "./SectionNav.astro";
 interface Props {
   title: string;
   subTitle: string;
-  bgSection: string;
   bgBlur: string;
 }
 
-const { title, subTitle, bgSection, bgBlur } = Astro.props;
+const { title, subTitle, bgBlur } = Astro.props;
 ---
 
 <section
   id="hero"
   class="w-screen h-screen flex justify-center relative p-3 md:p-10"
 >
-  <img
-    class="absolute top-0 left-0 object-cover overflow-hidden w-full h-full -z-10"
-    src={bgSection}
-    alt="imagen de fondo"
-  />
   <div
     class="container flex flex-col md:flex-row items-center justify-between max-w-4xl h-full relative rounded-xl p-2 text-[#fca311]"
   >
